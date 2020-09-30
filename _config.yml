@@ -1,2 +1,114 @@
-name: "'Adli Ihsan Hariadi - Yes my name has single quote"
+# Welcome to Beautiful Jekyll!
+# This config file is meant for settings that affect your entire website. When you first
+# set up your website you should go through all these settings and edit them, but after
+# the initial set up you won't need to come back to this file often.
+
+# --- Required options --- #
+
+# Name of website
+title: "'Adli Ihsan Hariadi"
+
+# Your name to show in the footer
+author: "'Adli Ihsan Hariadi"
+
+# --- List of links in the navigation bar --- #
+
+navbar-links:
+  JSON to Swagger YAML Schema: "Swagger-JSON-Schema-In-YAML_webversion"
+  About: "about"
+
+# --- Logo --- #
+
+# Image to show in the navigation bar - works best with a square image
+# Remove this parameter if you don't want an image in the navbar
+# avatar: "/assets/img/avatar-icon.png"
+
+# By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
+# round-avatar: true
+
+# If you want to have an image logo in the top-left corner instead of having the title of the website,
+# then specify the following parameter
+# title-img: /path/to/image
+
+
+# --- Footer social media links --- #
+
+# Select the social network links that you want to show in the footer.
+# Uncomment the links you want to show and add your information to each one.
+social-network-links:
+  github: adliih
+  linkedin: adliih
+
+# --- General options --- #
+
+# Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
+excerpt_length: 50
+
+# The keywords to associate with your website, for SEO purposes
+keywords: "adliih,adli,2011hari01"
+
+# --- Colours / background image --- #
+
+# Personalize the colours in your website. Colour values can be any valid CSS colour
+
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+
+# --- Misc --- #
+
+# Ruby Date Format to show dates of posts
+date_format: "%B %-d, %Y"
+
+# --- You don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+timezone: "Asia/Jakarta"
 markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+# paginate: 5
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+
+# Exclude these files from production site
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - screenshot.png
+  - docs/
+
+plugins:
+  - jekyll-remote-theme
+  # - jekyll-paginate
+
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189
+
+remote_theme: daattali/beautiful-jekyll@5.0.0
